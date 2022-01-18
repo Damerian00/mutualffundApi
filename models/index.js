@@ -1,16 +1,36 @@
 const dbConfig = require('../config/dbConfig');
 const {Sequelize, DataTypes} = require('sequelize');
+let sequelize = null;
 
-
-const sequelize = new Sequelize(
-    {
+if (process && process.env.DATABASE_URL) {
+    sequelize = new Sequelize(process.env.DATABASE_URL, {
+        dialectOptions: {
+        ssl: {
+            require: true,
+            rejectUnauthorized: false
+            }
+          }
+        }
+    );
+} else {
+   sequelize = new Sequelize(
+    { // use imported configurations from dbConfig
         database: dbConfig.DB,
         username: dbConfig.USER,
         password: dbConfig.PASSWORD,
         dialect: dbConfig.dialect,
         host: dbConfig.Host,
-    }
-)
+    })
+}
+// const sequelize = new Sequelize(
+//     {
+//         database: dbConfig.DB,
+//         username: dbConfig.USER,
+//         password: dbConfig.PASSWORD,
+//         dialect: dbConfig.dialect,
+//         host: dbConfig.Host,
+//     }
+// )
 
 sequelize.authenticate()
 .then(()=> {
@@ -34,7 +54,7 @@ db.sequelize.sync({force: false}).then (()=> {
 
 
 db.Investments.belongsTo(db.MutualFunds);
-db.MutualFunds.hasOne(db.Investments);
+db.MutualFunds.hasMany(db.Investments);
 
 
 module.exports = db;
