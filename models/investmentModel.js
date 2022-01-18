@@ -1,4 +1,4 @@
-const { MutualFunds } = require(".");
+
 
 module.exports = (sequelize, DataTypes) => {
     const Investment = sequelize.define("Investment", {

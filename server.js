@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const db = require('./models/index.js');
+
 const PORT = process.env.PORT || 3000;
 
 app.use(express.urlencoded({extended: true}));

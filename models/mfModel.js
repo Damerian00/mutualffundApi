@@ -1,5 +1,5 @@
 const  Sequelize = require("sequelize");
-const investment = require('./investmentModel')
+
 
 module.exports = (sequelize,DataTypes) => {
     const MutualFund = sequelize.define("MutualFund", {
