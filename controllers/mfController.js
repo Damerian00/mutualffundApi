@@ -49,7 +49,7 @@ const updateMF = async (req,res) => {
                 id: req.params.id
             } 
         })
-        res.status(200).send(`Mutual Fund with id: ${id} is deleted`)
+        res.status(200).JSON(`Mutual Fund with id: ${id} is deleted`)
     }
 
     module.exports = {
