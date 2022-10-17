@@ -6,13 +6,13 @@
 //     dialect: 'postgres',
 // }
 
-// module.exports = {
-//     Host: "containers-us-west-92.railway.app",
-//     USER: "postgres",
-//     PASSWORD: "7fkVwZglvOzy6QDSRj7w",
-//     DB: "railway",
-//     dialect: 'postgres',
-// }
+module.exports = {
+    Host: "containers-us-west-92.railway.app",
+    USER: "postgres",
+    PASSWORD: "7fkVwZglvOzy6QDSRj7w",
+    DB: "railway",
+    dialect: 'postgres',
+}
 
 /*
 DATABASE_URL=postgresql://${{ PGUSER }}:${{ PGPASSWORD }}@${{ PGHOST }}:${{ PGPORT }}/${{ PGDATABASE }}
