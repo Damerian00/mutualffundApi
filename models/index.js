@@ -52,7 +52,7 @@ db.sequelize = sequelize;
 db.MutualFunds = require('./mfModel')(sequelize, DataTypes);
 db.Investments = require('./investmentModel')(sequelize, DataTypes);
 
-db.sequelize.sync({force: false}).then (()=> {
+db.sequelize.sync({force: true}).then (()=> {
     console.log('DB synced with sequelize')
 }).catch ((err)=> {
     console.log(`Error syncing the DB to sequelize ${err}`);
