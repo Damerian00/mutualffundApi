@@ -15,9 +15,9 @@ if (process && process.env.DATABASE_URL) {
 } else {
    sequelize = new Sequelize(
     { // use imported configurations from dbConfig
-        database: dbConfig.DB,
-        username: dbConfig.USER,
-        password: dbConfig.PASSWORD,
+        // database: dbConfig.DB,
+        // username: dbConfig.USER,
+        // password: dbConfig.PASSWORD,
         dialect: dbConfig.dialect,
         dialectOptions: {
             ssl: {

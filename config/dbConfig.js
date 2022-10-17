@@ -8,9 +8,9 @@
 
 module.exports = {
     Host: "jbb8y3dri1ywovy2.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-    USER: "u40d7qh9lgfu7gu9",
-    PASSWORD: "olpi4kmzg4lbcliv",
-    DB: "pkq586hal52ang4t",
+    // USER: "u40d7qh9lgfu7gu9",
+    // PASSWORD: "olpi4kmzg4lbcliv",
+    // DB: "pkq586hal52ang4t",
     dialect: 'mysql',
     port: 3306,
 }
