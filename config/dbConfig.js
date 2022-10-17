@@ -6,13 +6,20 @@
 //     dialect: 'postgres',
 // }
 
-module.exports = {
-    Host: "jbb8y3dri1ywovy2.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-    // USER: "u40d7qh9lgfu7gu9",
-    // PASSWORD: "olpi4kmzg4lbcliv",
-    // DB: "pkq586hal52ang4t",
-    dialect: 'mysql',
-    port: 3306,
-}
+// module.exports = {
+//     Host: "containers-us-west-92.railway.app",
+//     USER: "postgres",
+//     PASSWORD: "7fkVwZglvOzy6QDSRj7w",
+//     DB: "railway",
+//     dialect: 'postgres',
+// }
 
+/*
+DATABASE_URL=postgresql://${{ PGUSER }}:${{ PGPASSWORD }}@${{ PGHOST }}:${{ PGPORT }}/${{ PGDATABASE }}
+PGDATABASE=railway
+PGHOST=containers-us-west-92.railway.app
+PGPASSWORD=7fkVwZglvOzy6QDSRj7w
+PGPORT=7484
+PGUSER=postgres
 
+*/

@@ -15,9 +15,9 @@ if (process && process.env.DATABASE_URL) {
 } else {
    sequelize = new Sequelize(
     { // use imported configurations from dbConfig
-        // database: dbConfig.DB,
-        // username: dbConfig.USER,
-        // password: dbConfig.PASSWORD,
+        database: dbConfig.DB,
+        username: dbConfig.USER,
+        password: dbConfig.PASSWORD,
         dialect: dbConfig.dialect,
         dialectOptions: {
             ssl: {
@@ -52,7 +52,7 @@ db.sequelize = sequelize;
 db.MutualFunds = require('./mfModel')(sequelize, DataTypes);
 db.Investments = require('./investmentModel')(sequelize, DataTypes);
 
-db.sequelize.sync().then (()=> {
+db.sequelize.sync({force: false}).then (()=> {
     console.log('DB synced with sequelize')
 }).catch ((err)=> {
     console.log(`Error syncing the DB to sequelize ${err}`);
