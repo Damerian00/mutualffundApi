@@ -13,20 +13,21 @@ if (process && process.env.DATABASE_URL) {
         }
     );
 } else {
-   sequelize = new Sequelize(
-    { // use imported configurations from dbConfig
-        database: dbConfig.DB,
-        username: dbConfig.USER,
-        password: dbConfig.PASSWORD,
-        dialect: dbConfig.dialect,
-        dialectOptions: {
-            ssl: {
-                require: true,
-                rejectUnauthorized: false
-                }
-              },
-        host: dbConfig.Host,
-    })
+//    sequelize = new Sequelize(
+//     { // use imported configurations from dbConfig
+//         database: dbConfig.DB,
+//         username: dbConfig.USER,
+//         password: dbConfig.PASSWORD,
+//         dialect: dbConfig.dialect,
+//         dialectOptions: {
+//             ssl: {
+//                 require: true,
+//                 rejectUnauthorized: false
+//                 }
+//               },
+//         host: dbConfig.Host,
+//     })
+const sequelize = new Sequelize('postgresql://postgres:KkaPGjf5oqiPDo9mebmG@containers-us-west-107.railway.app:5923/railway')
 }
 // const sequelize = new Sequelize(
 //     {
